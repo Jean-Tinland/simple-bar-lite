@@ -1,0 +1,84 @@
+{
+  "shell": "bash",
+  "yabaiPath": "/usr/local/bin/yabai",
+  "slidingAnimationPace": 8,
+  "theme": {
+    "dark": {
+      "main": "#0f0f0f",
+      "mainAlt": "#98a8c5",
+      "minor": "#2b2b2b",
+      "red": "#e78482",
+      "green": "#8fc8BB",
+      "blue": "#6db3cE",
+      "yellow": "#ffd484",
+      "orange": "#ffb374",
+      "magenta": "#ad82cB",
+      "cyan": "#7eddde",
+      "black": "#0f0f0f",
+      "white": "#fff"
+    },
+    "light": {
+      "main": "#0f0f0f",
+      "mainAlt": "#98a8c5",
+      "minor": "#2b2b2b",
+      "red": "#e78482",
+      "green": "#8fc8BB",
+      "blue": "#6db3cE",
+      "yellow": "#ffd484",
+      "orange": "#ffb374",
+      "magenta": "#ad82cB",
+      "cyan": "#7eddde",
+      "black": "#0f0f0f",
+      "white": "#fff"
+    },
+    "gradient": "linear-gradient(0.45turn, var(--spl-orange), var(--spl-red))",
+    "barWidth": "100%",
+    "barHeight": "34px",
+    "barVerticalOffset": "0px",
+    "barHorizontalOffset": "0px",
+    "barInnerMargin": "3px",
+    "barRadius": "0px",
+    "spaceMargin": "0px 12px 0px 0px",
+    "processWidth": "320px",
+    "itemRadius": "18px",
+    "itemMargin": "0px 0px 0px 4px",
+    "itemInnerMargin": "3px 7px",
+    "fontFamily": "JetBrains Mono, monospace",
+    "fontSize": "11px",
+    "shadow": "0 5px 10px rgba(0, 0, 0, 0.24)",
+    "transitionEasing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  "dataWidgets": {
+    "battery": {
+      "enabled": true,
+      "refreshFrequency": 10000,
+      "color": "currentColor",
+      "onClickCommand": null,
+      "refreshOnClick": false
+    },
+    "network": {
+      "enabled": true,
+      "refreshFrequency": 12000,
+      "color": "currentColor",
+      "device": "en0",
+      "onClickCommand": null,
+      "refreshOnClick": false
+    },
+    "dateTime": {
+      "enabled": true,
+      "refreshFrequency": 60000,
+      "color": "currentColor",
+      "formatOptions": {
+        "weekday": "short",
+        "month": "short",
+        "day": "numeric",
+        "hour": "numeric",
+        "minute": "numeric"
+      },
+      "overrideFormatOptions": null,
+      "locale": "en-UK",
+      "onClickCommand": null,
+      "refreshOnClick": false
+    }
+  }
+}

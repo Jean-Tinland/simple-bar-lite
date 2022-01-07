@@ -1,0 +1,94 @@
+.spl-space {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--spl-space-margin);
+  padding: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  animation: spl-space-bluring 160ms var(--spl-transition-easing);
+}
+
+@keyframes spl-space-bluring {
+  0% {
+    transform: scale(1.2);
+  }
+}
+
+.spl-space--focused {
+  background: var(--spl-gradient);
+  animation: spl-space-focusing 160ms var(--spl-transition-easing);
+}
+
+@keyframes spl-space-focusing {
+  0% {
+    transform: scale(0.8);
+  }
+}
+
+.spl-space--fullscreen {
+  width: 16px;
+  height: 16px;
+  background-color: var(--spl-main-alt);
+}
+
+.spl-space__inner {
+  flex: 0 0 12px;
+  height: 12px;
+  border: 3px solid transparent;
+  border-radius: inherit;
+  background-color: var(--spl-main-alt);
+}
+
+.spl-space--focused .spl-space__inner {
+  flex: 0 0 18px;
+  height: 18px;
+  background: var(--spl-gradient);
+  border: 4px solid var(--spl-main);
+}
+
+.spl-space--fullscreen .spl-space__inner {
+  flex: 0 0 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--spl-main-alt);
+  border: 1px dashed var(--spl-main);
+}
+
+.spl-space--fullscreen .spl-space__inner::after {
+  content: 'F';
+  font-size: calc(var(--spl-font-size) - 1px);
+}
+
+.spl-space--empty .spl-space__inner {
+  background-color: transparent;
+  border: 1px solid var(--spl-main-alt);
+}
+
+.spl-space__label {
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 6px);
+  padding: 3px 7px;
+  font-size: calc(var(--spl-font-size) - 1px);
+  background: var(--spl-gradient);
+  border: 2px solid var(--spl-main);
+  border-radius: var(--spl-item-radius);
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 160ms var(--spl-transition-easing);
+  pointer-events: none;
+  touch-action: none;
+  z-index: 1;
+}
+
+.spl-space:hover .spl-space__label {
+  opacity: 1;
+}

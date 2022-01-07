@@ -1,0 +1,7 @@
+@import './core/base.css';
+
+@import './components/battery.css';
+@import './components/date-time.css';
+@import './components/network.css';
+@import './components/process.css';
+@import './components/space.css';
