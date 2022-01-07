@@ -1,6 +1,7 @@
 import Space from './lib/components/space.jsx'
 import Process from './lib/components/process.jsx'
 import Battery from './lib/components/battery.jsx'
+import Sound from './lib/components/sound.jsx'
 import DateTime from './lib/components/date-time.jsx'
 import Network from './lib/components/network.jsx'
 
@@ -14,7 +15,7 @@ const refreshFrequency = false
 
 const settings = Settings.get()
 const { yabaiPath, shell, dataWidgets } = settings
-const { battery, dateTime, network } = dataWidgets
+const { battery, dateTime, network, output: soundOutput, input: soundInput } = dataWidgets
 
 const command = `${shell} simple-bar-lite/lib/scripts/init.sh ${yabaiPath}`
 
@@ -45,6 +46,8 @@ const render = ({ output, error }) => {
       <Process currentWindow={currentWindow} />
       <div className="spl-bar__data">
         {network.enabled && <Network />}
+        {soundOutput.enabled && <Sound kind="output" />}
+        {soundInput.enabled && <Sound kind="input" />}
         {battery.enabled && <Battery />}
         {dateTime.enabled && <DateTime />}
       </div>

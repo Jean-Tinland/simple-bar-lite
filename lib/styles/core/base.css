@@ -1,5 +1,5 @@
 .spl-bar {
-  position: fixed;
+  position: absolute;
   top: var(--spl-bar-vertical-offset);
   left: var(--spl-bar-horizontal-offset);
   width: calc(var(--spl-bar-width) - (var(--spl-bar-horizontal-offset) * 2));
@@ -8,11 +8,19 @@
   align-items: center;
   padding: 0 6px;
   font-family: var(--spl-font-family);
-  background-color: var(--spl-background);
   border-radius: var(--spl-bar-radius);
   box-sizing: border-box;
   box-shadow: var(--spl-shadow);
   z-index: 1;
+}
+
+.spl-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--spl-background);
+  opacity: var(--spl-bar-opacity);
+  z-index: -1;
 }
 
 .spl-bar--no-shadow {

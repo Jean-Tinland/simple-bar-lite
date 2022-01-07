@@ -1,19 +1,41 @@
 .spl-process {
+  position: relative;
   display: flex;
   align-items: center;
   padding: var(--spl-item-inner-margin);
   color: var(--spl-main-alt);
   font-family: var(--spl-font-family);
   font-size: var(--spl-font-size);
-  border-radius: calc(var(--spl-item-radius) / 3);
+  border-radius: var(--spl-item-radius);
   outline: none;
-  box-shadow: var(--spl-shadow);
+  transition: color 160ms var(--spl-transition-easing), box-shadow 160ms var(--spl-transition-easing);
+  animation: spl-process-appearance 160ms var(--spl-transition-easing);
   z-index: 0;
-  transition: background-color 160ms var(--spl-transition-easing);
+}
+
+@keyframes spl-process-appearance {
+  0% {
+    opacity: 0;
+  }
 }
 
 .spl-process:hover {
-  background-color: var(--spl-minor);
+  color: var(--spl-main);
+  box-shadow: var(--spl-shadow);
+}
+
+.spl-process::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: var(--spl-gradient);
+  border-radius: inherit;
+  transition: opacity 160ms var(--spl-transition-easing);
+}
+
+.spl-process:hover::before {
+  opacity: 1;
 }
 
 .spl-process:empty {

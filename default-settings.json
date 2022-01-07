@@ -15,7 +15,8 @@
       "magenta": "#ad82cB",
       "cyan": "#7eddde",
       "black": "#0f0f0f",
-      "white": "#fff"
+      "white": "#fff",
+      "gradient": "linear-gradient(0.45turn, var(--spl-orange), var(--spl-red))"
     },
     "light": {
       "main": "#0f0f0f",
@@ -29,15 +30,16 @@
       "magenta": "#ad82cB",
       "cyan": "#7eddde",
       "black": "#0f0f0f",
-      "white": "#fff"
+      "white": "#fff",
+      "gradient": "linear-gradient(0.45turn, var(--spl-orange), var(--spl-red))"
     },
-    "gradient": "linear-gradient(0.45turn, var(--spl-orange), var(--spl-red))",
-    "barWidth": "100%",
+    "barWidth": "100vw",
     "barHeight": "34px",
     "barVerticalOffset": "0px",
     "barHorizontalOffset": "0px",
     "barInnerMargin": "3px",
     "barRadius": "0px",
+    "barOpacity": "0.8",
     "spaceMargin": "0px 12px 0px 0px",
     "processWidth": "320px",
     "itemRadius": "18px",
@@ -52,6 +54,20 @@
     "battery": {
       "enabled": true,
       "refreshFrequency": 10000,
+      "color": "currentColor",
+      "onClickCommand": null,
+      "refreshOnClick": false
+    },
+    "input": {
+      "enabled": true,
+      "refreshFrequency": 20000,
+      "color": "currentColor",
+      "onClickCommand": null,
+      "refreshOnClick": false
+    },
+    "output": {
+      "enabled": true,
+      "refreshFrequency": 20000,
       "color": "currentColor",
       "onClickCommand": null,
       "refreshOnClick": false
