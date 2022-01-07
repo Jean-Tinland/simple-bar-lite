@@ -78,6 +78,7 @@
   border-radius: var(--spl-item-radius);
   opacity: 0;
   transform: translate(-8px, -50%) scale(0.8);
+  box-shadow: var(--spl-shadow);
   transition: opacity 160ms var(--spl-transition-easing), transform 160ms var(--spl-transition-easing);
   pointer-events: none;
   touch-action: none;

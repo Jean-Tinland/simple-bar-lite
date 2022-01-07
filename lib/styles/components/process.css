@@ -20,7 +20,6 @@
 }
 
 .spl-process:hover {
-  color: var(--spl-main);
   box-shadow: var(--spl-shadow);
 }
 
@@ -35,7 +34,7 @@
 }
 
 .spl-process:hover::before {
-  opacity: 1;
+  opacity: 0.1;
 }
 
 .spl-process:empty {

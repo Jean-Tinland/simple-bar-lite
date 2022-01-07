@@ -2,11 +2,12 @@ import * as Uebersicht from 'uebersicht'
 import * as Settings from '../services/settings'
 import * as Output from '../services/output'
 import * as ClassNames from '../services/classnames'
+import Widget from './widget.jsx'
 import useWidgetRefresh from '../hooks/use-widget-refresh'
 
 const settings = Settings.get()
 const { network } = settings.dataWidgets
-const { color, device, refreshFrequency } = network
+const { color, device, onClickCommand, refreshOnClick, refreshFrequency } = network
 
 const renderName = (name) => {
   if (!name) return ''
@@ -36,9 +37,15 @@ const Network = () => {
   const classes = ClassNames.build('spl-network', { 'spl-network--active': status === 'active' })
 
   return (
-    <div className={classes} style={{ color }}>
+    <Widget
+      className={classes}
+      getter={getNetwork}
+      onClickCommand={onClickCommand}
+      refreshOnClick={refreshOnClick}
+      style={{ color }}
+    >
       {name}
-    </div>
+    </Widget>
   )
 }
 

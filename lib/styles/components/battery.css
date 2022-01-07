@@ -2,10 +2,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin: var(--spl-item-margin);
-  padding: var(--spl-item-inner-margin);
-  font-family: var(--spl-font-family);
-  font-size: var(--spl-font-size);
   overflow: hidden;
 }
 
@@ -47,10 +43,14 @@
   left: calc(50% - 5px);
   width: 11px;
   height: 11px;
-  fill: currentColor;
+  fill: var(--spl-main-alt);
   stroke: var(--spl-main);
   stroke-width: 2;
   z-index: 1;
+}
+
+.spl-widget--clickable:hover .spl-battery__charging-icon {
+  stroke: var(--spl-orange);
 }
 
 .spl-battery__icon-filler {

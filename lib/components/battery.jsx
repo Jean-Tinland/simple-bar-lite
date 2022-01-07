@@ -3,11 +3,12 @@ import * as Settings from '../services/settings'
 import * as Output from '../services/output'
 import * as ClassNames from '../services/classnames'
 import * as Icons from './icons.jsx'
+import Widget from './widget.jsx'
 import useWidgetRefresh from '../hooks/use-widget-refresh'
 
 const settings = Settings.get()
 const { battery } = settings.dataWidgets
-const { color, refreshFrequency } = battery
+const { color, onClickCommand, refreshOnClick, refreshFrequency } = battery
 
 const getTransform = (value) => {
   let transform = `0.${value}`
@@ -47,7 +48,13 @@ const Battery = () => {
   const transformValue = getTransform(percentage)
 
   return (
-    <div className={classes} style={{ color }}>
+    <Widget
+      className={classes}
+      getter={getBattery}
+      onClickCommand={onClickCommand}
+      refreshOnClick={refreshOnClick}
+      style={{ color }}
+    >
       {caffeinate.length > 0 && <span className="spl-battery__caffeinate-indicator">+</span>}
       <div className="spl-battery__icon">
         <div className="spl-battery__icon-inner">
@@ -56,7 +63,7 @@ const Battery = () => {
         </div>
       </div>
       {percentage}%
-    </div>
+    </Widget>
   )
 }
 

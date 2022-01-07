@@ -1,10 +1,12 @@
 import * as Uebersicht from 'uebersicht'
 import * as Settings from '../services/settings'
+import Widget from './widget.jsx'
 import useWidgetRefresh from '../hooks/use-widget-refresh'
 
 const settings = Settings.get()
 const { dateTime } = settings.dataWidgets
-const { color, formatOptions, locale, overrideFormatOptions, refreshFrequency } = dateTime
+const { color, formatOptions, locale, overrideFormatOptions, onClickCommand, refreshOnClick, refreshFrequency } =
+  dateTime
 
 const DateTime = () => {
   const [output, setOutput] = Uebersicht.React.useState()
@@ -20,9 +22,15 @@ const DateTime = () => {
   if (!output) return null
 
   return (
-    <div className="spl-date-time" style={{ color }}>
+    <Widget
+      className="spl-date-time"
+      getter={getDateTime}
+      onClickCommand={onClickCommand}
+      refreshOnClick={refreshOnClick}
+      style={{ color }}
+    >
       {output}
-    </div>
+    </Widget>
   )
 }
 
