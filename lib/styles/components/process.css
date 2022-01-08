@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   padding: var(--spl-item-inner-margin);
-  color: var(--spl-main-alt);
+  color: var(--spl-foreground);
   font-family: var(--spl-font-family);
   font-size: var(--spl-font-size);
   border-radius: var(--spl-item-radius);

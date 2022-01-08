@@ -43,7 +43,7 @@
   left: calc(50% - 5px);
   width: 11px;
   height: 11px;
-  fill: var(--spl-main-alt);
+  fill: var(--spl-foreground);
   stroke: var(--spl-main);
   stroke-width: 2;
   z-index: 1;

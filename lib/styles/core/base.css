@@ -41,5 +41,5 @@
   display: flex;
   align-items: center;
   margin-left: auto;
-  color: var(--spl-main-alt);
+  color: var(--spl-foreground);
 }
