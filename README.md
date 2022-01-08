@@ -64,3 +64,7 @@ If you want to customize the colors, shadows, fonts, etc... you can simply setup
 You can copy the content of `default-settings.json` file in your `custom-settings.json` and change the values.
 
 Alongside the theme customization, you will find all the other settings you can customize.
+
+### All the settings
+
+Coming soon!
