@@ -4,7 +4,9 @@ import * as ClassNames from '../services/classnames'
 const Widget = ({ className, onClickCommand, getter, refreshOnClick, style, children }) => {
   const onClick = async () => {
     await Uebersicht.run(onClickCommand)
-    if (refreshOnClick) await getter()
+    if (refreshOnClick) {
+      await getter()
+    }
   }
 
   const classes = ClassNames.build('spl-widget', className, {

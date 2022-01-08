@@ -1,5 +1,6 @@
 import Space from './lib/components/space.jsx'
 import Process from './lib/components/process.jsx'
+import CustomWidgets from './lib/components/custom-widgets.jsx'
 import Battery from './lib/components/battery.jsx'
 import Sound from './lib/components/sound.jsx'
 import DateTime from './lib/components/date-time.jsx'
@@ -45,6 +46,7 @@ const render = ({ output, error }) => {
       ))}
       <Process currentWindow={currentWindow} />
       <div className="spl-bar__data">
+        <CustomWidgets />
         {network.enabled && <Network />}
         {soundOutput.enabled && <Sound kind="output" />}
         {soundInput.enabled && <Sound kind="input" />}

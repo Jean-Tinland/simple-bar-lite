@@ -16,6 +16,8 @@
   position: relative;
   border-radius: var(--spl-item-radius);
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
   transform: translateZ(0);
   transition: color 160ms var(--spl-transition-easing), box-shadow 160ms var(--spl-transition-easing);
   z-index: 0;

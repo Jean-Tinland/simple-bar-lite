@@ -48,8 +48,6 @@ After cloning the project, simply activate it in Übersicht's widgets list.
 
 - `simple-bar-main-jsx`
 
-## Settings
-
 ## Clickable elements
 
 Some elements of **simple-bar** are interactives. For example :
@@ -59,10 +57,10 @@ Some elements of **simple-bar** are interactives. For example :
 
 Clickable elements have a colored background showing up on hover in order to easily identify them.
 
-## Customization
-
-### Colors & theme
+## Customization & settings
 
 If you want to customize the colors, shadows, fonts, etc... you can simply setup your own theme in the `custom-settings.json` file.
 
 You can copy the content of `default-settings.json` file in your `custom-settings.json` and change the values.
+
+Alongside the theme customization, you will find all the other settings you can customize.

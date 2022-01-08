@@ -1,4 +1,4 @@
-yabai_path=$1
+yabai_path="$1"
 
 pgrep -x yabai > /dev/null
 
