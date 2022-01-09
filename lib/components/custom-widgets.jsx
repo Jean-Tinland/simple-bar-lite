@@ -39,7 +39,7 @@ const CustomWidget = ({ widget }) => {
 }
 
 const CustomWidgets = () => {
-  return customWidgets.map((widget, i) => widget.active && <CustomWidget key={i} widget={widget} />)
+  return customWidgets.map((widget, i) => widget.enabled && <CustomWidget key={i} widget={widget} />)
 }
 
 export default CustomWidgets
