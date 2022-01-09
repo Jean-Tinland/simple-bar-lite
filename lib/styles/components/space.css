@@ -21,7 +21,7 @@
 }
 
 .spl-space--focused {
-  border: 1px solid var(--orange);
+  border: 1px solid var(--spl-orange);
   animation: spl-space-focusing 160ms var(--spl-transition-easing);
 }
 
