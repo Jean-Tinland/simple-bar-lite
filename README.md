@@ -24,7 +24,9 @@ Becareful, for Big Sur users, some actions must be taken in order to make yabai 
 
 ## Preview
 
-![img](./preview.jpg)
+![img](./preview-dark.jpg)
+
+![img](./preview-light.jpg)
 
 ## Installation
 
