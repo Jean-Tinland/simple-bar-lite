@@ -60,6 +60,8 @@
 
 .spl-space--fullscreen .spl-space__inner::after {
   content: 'F';
+  margin-top: 1px;
+  color: var(--spl-background);
   font-size: calc(var(--spl-font-size) - 1px);
 }
 
