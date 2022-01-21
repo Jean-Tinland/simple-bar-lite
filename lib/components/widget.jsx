@@ -3,9 +3,12 @@ import * as ClassNames from '../services/classnames'
 
 const Widget = ({ className, onClickCommand, getter, refreshOnClick, style, children }) => {
   const onClick = async () => {
-    await Uebersicht.run(onClickCommand)
     if (refreshOnClick) {
       await getter()
+    }
+
+    if (onClickCommand) {
+      await Uebersicht.run(onClickCommand)
     }
   }
 
@@ -14,7 +17,7 @@ const Widget = ({ className, onClickCommand, getter, refreshOnClick, style, chil
   })
 
   return (
-    <div className={classes} style={style} onClick={onClickCommand && onClick}>
+    <div className={classes} style={style} onClick={(onClickCommand || refreshOnClick) && onClick}>
       {children}
     </div>
   )
