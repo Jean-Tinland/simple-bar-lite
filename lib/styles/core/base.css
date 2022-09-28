@@ -9,6 +9,7 @@
   padding: 0 6px;
   font-family: var(--spl-font-family);
   border-radius: var(--spl-bar-radius);
+  border: 1px solid var(--spl-background);
   box-sizing: border-box;
   box-shadow: var(--spl-shadow);
   z-index: 1;

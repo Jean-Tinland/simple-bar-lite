@@ -1,1 +1,103 @@
-{}
+{
+  "shell": "bash",
+  "yabaiPath": "/usr/local/bin/yabai",
+  "slidingAnimationPace": 8,
+  "themeScheme": "auto",
+  "theme": {
+    "dark": {
+      "main": "#282a36",
+      "mainAlt": "#44475a",
+      "minor": "#f8f8f2",
+      "red": "#ff5555",
+      "green": "#50fa7b",
+      "blue": "#6db3cE",
+      "yellow": "#f1fa8c",
+      "orange": "#ffb86c",
+      "magenta": "#bd93f9",
+      "pink": "#ff79c6",
+      "cyan": "#8be9fd",
+      "foreground": "#f8f8f2",
+      "gradient": "linear-gradient(0.45turn, var(--spl-magenta), var(--spl-pink))"
+    },
+    "light": {
+      "main": "#f5f5f5",
+      "mainAlt": "#ddd",
+      "minor": "#eee",
+      "red": "#e78482",
+      "green": "#8fc8BB",
+      "blue": "#6db3cE",
+      "yellow": "#ffd484",
+      "orange": "#ffb374",
+      "magenta": "#ad82cB",
+      "cyan": "#7eddde",
+      "foreground": "#0f0f0f",
+      "gradient": "linear-gradient(0.45turn, var(--spl-orange), var(--spl-red))"
+    },
+    "black": "#0f0f0f",
+    "white": "#f5f5f5",
+    "barWidth": "100vw",
+    "barHeight": "30px",
+    "barVerticalOffset": "2px",
+    "barHorizontalOffset": "12px",
+    "barInnerMargin": "3px",
+    "barRadius": "5px",
+    "barOpacity": "0.85",
+    "spaceMargin": "0px 12px 0px 0px",
+    "processWidth": "420px",
+    "itemRadius": "18px",
+    "itemMargin": "0px 0px 0px 4px",
+    "itemInnerMargin": "3px 7px",
+    "fontFamily": "MesloLGS NF, monospace",
+    "fontSize": "12px",
+    "shadow": "0 5px 10px rgba(0, 0, 0, 0.24)",
+    "transitionEasing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  "dataWidgets": {
+    "battery": {
+      "enabled": true,
+      "refreshFrequency": 10000,
+      "color": "currentColor",
+      "onClickCommand": null,
+      "refreshOnClick": false
+    },
+    "input": {
+      "enabled": false,
+      "refreshFrequency": 20000,
+      "color": "currentColor",
+      "onClickCommand": null,
+      "refreshOnClick": false
+    },
+    "output": {
+      "enabled": false,
+      "refreshFrequency": 20000,
+      "color": "currentColor",
+      "onClickCommand": null,
+      "refreshOnClick": false
+    },
+    "network": {
+      "enabled": true,
+      "refreshFrequency": 12000,
+      "color": "currentColor",
+      "device": "en0",
+      "onClickCommand": null,
+      "refreshOnClick": false
+    },
+    "dateTime": {
+      "enabled": true,
+      "refreshFrequency": 60000,
+      "color": "currentColor",
+      "formatOptions": {
+        "weekday": "short",
+        "month": "short",
+        "day": "numeric",
+        "hour": "numeric",
+        "minute": "numeric"
+      },
+      "overrideFormatOptions": null,
+      "locale": "en-UK",
+      "onClickCommand": null,
+      "refreshOnClick": false
+    }
+  },
+  "customWidgets": []
+}

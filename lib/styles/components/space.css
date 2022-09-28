@@ -21,7 +21,7 @@
 }
 
 .spl-space--focused {
-  border: 1px solid var(--spl-orange);
+  border: 1px solid var(--spl-magenta);
   animation: spl-space-focusing 160ms var(--spl-transition-easing);
 }
 
@@ -41,11 +41,11 @@
   flex: 0 0 12px;
   height: 12px;
   border-radius: inherit;
-  background-color: var(--spl-foreground);
+  background-color: var(--spl-green);
 }
 
 .spl-space--focused .spl-space__inner {
-  background: var(--spl-gradient);
+  background: var(--spl-magenta);
 }
 
 .spl-space--fullscreen .spl-space__inner {
