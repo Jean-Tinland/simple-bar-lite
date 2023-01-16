@@ -17,7 +17,7 @@ const Widget = ({ className, onClickCommand, getter, refreshOnClick, style, chil
   })
 
   return (
-    <div className={classes} style={style} onClick={(onClickCommand || refreshOnClick) && onClick}>
+    <div className={classes} style={style} onClick={(onClickCommand || refreshOnClick) && onClick || undefined}>
       {children}
     </div>
   )

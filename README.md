@@ -44,6 +44,14 @@ $ git clone https://github.com/Jean-Tinland/simple-bar-lite $HOME/Library/Applic
 
 You can set your custom yabai path in the `custom-settings.json` file.
 
+On recent versions of macOS, Homebrew will install `yabai` in `/opt/homebrew/bin/yabai`.
+
+```json
+{
+  "yabaiPath": "/opt/homebrew/bin/yabai"
+}
+```
+
 ## Usage
 
 After cloning the project, simply activate it in Übersicht's widgets list.

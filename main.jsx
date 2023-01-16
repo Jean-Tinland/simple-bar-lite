@@ -12,11 +12,18 @@ import * as Output from './lib/services/output'
 import * as Styles from './lib/services/styles'
 import * as ClassNames from './lib/services/classnames'
 
+const widgets = {
+  battery: Battery,
+  input: Sound,
+  output: Sound,
+  dateTime: DateTime,
+  network: Network
+}
+
 const refreshFrequency = false
 
 const settings = Settings.get()
 const { yabaiPath, shell, dataWidgets } = settings
-const { battery, dateTime, network, output: soundOutput, input: soundInput } = dataWidgets
 
 const command = `${shell} simple-bar-lite/lib/scripts/init.sh ${yabaiPath}`
 
@@ -47,11 +54,17 @@ const render = ({ output, error }) => {
       <Process currentWindow={currentWindow} />
       <div className="spl-bar__data">
         <CustomWidgets />
-        {network.enabled && <Network />}
-        {soundOutput.enabled && <Sound kind="output" />}
-        {soundInput.enabled && <Sound kind="input" />}
-        {battery.enabled && <Battery />}
-        {dateTime.enabled && <DateTime />}
+        {Object.keys(dataWidgets)
+          .map((key) => ({ key, ...dataWidgets[key] }))
+          .map(({ key, enabled, args }) => {
+            if (!enabled) return undefined
+
+            const Widget = widgets[key]
+            if (!Widget) return undefined
+
+            return <Widget {...args} key={key} />
+          })
+          .filter(Boolean)}
       </div>
     </div>
   )

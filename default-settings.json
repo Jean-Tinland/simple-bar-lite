@@ -59,19 +59,25 @@
       "onClickCommand": null,
       "refreshOnClick": false
     },
-    "input": {
-      "enabled": true,
-      "refreshFrequency": 20000,
-      "color": "currentColor",
-      "onClickCommand": null,
-      "refreshOnClick": false
-    },
     "output": {
       "enabled": true,
       "refreshFrequency": 20000,
       "color": "currentColor",
       "onClickCommand": null,
-      "refreshOnClick": false
+      "refreshOnClick": false,
+      "args": {
+        "kind": "output"
+      }
+    },
+    "input": {
+      "enabled": true,
+      "refreshFrequency": 20000,
+      "color": "currentColor",
+      "onClickCommand": null,
+      "refreshOnClick": false,
+      "args": {
+        "kind": "input"
+      }
     },
     "network": {
       "enabled": true,
