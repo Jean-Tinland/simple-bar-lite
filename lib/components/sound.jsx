@@ -9,8 +9,8 @@ const settings = Settings.get()
 const { dataWidgets } = settings
 
 const symbols = {
-  output: '>',
-  input: '<'
+  output: '🔈',
+  input: '🎤'
 }
 
 const Sound = ({ kind }) => {
@@ -47,7 +47,7 @@ const Sound = ({ kind }) => {
       refreshOnClick={refreshOnClick}
       style={{ color }}
     >
-      {volume}% {symbol}
+      {symbol} {volume}%
     </Widget>
   )
 }

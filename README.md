@@ -44,6 +44,14 @@ $ git clone https://github.com/Jean-Tinland/simple-bar-lite $HOME/Library/Applic
 
 You can set your custom yabai path in the `custom-settings.json` file.
 
+On recent versions of macOS, Homebrew will install `yabai` in `/opt/homebrew/bin/yabai`.
+
+```json
+{
+  "yabaiPath": "/opt/homebrew/bin/yabai"
+}
+```
+
 ## Usage
 
 After cloning the project, simply activate it in Übersicht's widgets list.
@@ -66,6 +74,17 @@ If you want to customize the colors, shadows, fonts, etc... you can simply setup
 You can copy the content of `default-settings.json` file in your `custom-settings.json` and change the values.
 
 Alongside the theme customization, you will find all the other settings you can customize.
+
+## Custom Components
+
+To add a new component
+
+1. add a file + contents to `./lib/custom-components/`
+2. add the component to `./lib/custom-components/index.jsx`
+3. add configuration item to `./custom-settings.json` with an object containing at least 
+   ```json
+   { "name": "componentname", "enabled": true }
+   ```
 
 ### All the settings
 
