@@ -6,6 +6,8 @@ import Sound from './lib/components/sound.jsx'
 import DateTime from './lib/components/date-time.jsx'
 import Network from './lib/components/network.jsx'
 
+import CustomComponents from './lib/custom-components/index.jsx'
+
 import * as Settings from './lib/services/settings'
 import * as Json from './lib/services/json'
 import * as Output from './lib/services/output'
@@ -29,6 +31,8 @@ const command = `${shell} simple-bar-lite/lib/scripts/init.sh ${yabaiPath}`
 
 Styles.inject('simple-bar-lite-spaces', [Styles.variables])
 Styles.load('simple-bar-lite/lib/styles/index.css', 'simple-bar-lite-styles')
+
+const { customComponents } = Settings.get()
 
 const render = ({ output, error }) => {
   if (!output || error) return null
@@ -54,6 +58,7 @@ const render = ({ output, error }) => {
       <Process currentWindow={currentWindow} />
       <div className="spl-bar__data">
         <CustomWidgets />
+        <CustomComponents />
         {Object.keys(dataWidgets)
           .map((key) => ({ key, ...dataWidgets[key] }))
           .map(({ key, enabled, args }) => {

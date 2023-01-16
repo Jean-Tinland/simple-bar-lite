@@ -104,5 +104,16 @@
       "refreshOnClick": false
     }
   },
-  "customWidgets": []
+  "customWidgets": [],
+  "customComponents": [
+    {
+      "name": "weather",
+      "enabled": true,
+      "location": "Gorinchem,ZH",
+      "refreshFrequency": 60000,
+      "refreshOnClick": true,
+      "color": "",
+      "classes": ""
+    }
+  ]
 }

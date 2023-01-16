@@ -75,6 +75,17 @@ You can copy the content of `default-settings.json` file in your `custom-setting
 
 Alongside the theme customization, you will find all the other settings you can customize.
 
+## Custom Components
+
+To add a new component
+
+1. add a file + contents to `./lib/custom-components/`
+2. add the component to `./lib/custom-components/index.jsx`
+3. add configuration item to `./custom-settings.json` with an object containing at least 
+   ```json
+   { "name": "componentname", "enabled": true }
+   ```
+
 ### All the settings
 
 Coming soon!
