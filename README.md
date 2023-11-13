@@ -14,11 +14,11 @@ A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersich
 
 In order to make this custom bar work, you'll need to install both [yabai](https://github.com/koekeishiya/yabai) and [Übersicht](https://github.com/felixhageloh/uebersicht), both of them must be up to date.
 
-**`simple-bar-lite` supports only yabai v4**.
+**`simple-bar-lite` supports only yabai v4 and above**.
 
 Becareful, for Big Sur users, some actions must be taken in order to make yabai with scripting addition fully operational: [see here for more details](<https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#macos-big-sur---automatically-load-scripting-addition-on-startup>).
 
-`simple-bar-lite` has been tested and is working on Monterey but should work on both Catalina & Big Sur.
+`simple-bar-lite` has been tested and is working on Monterey, Ventura & Sonoma but should work on both Catalina & Big Sur.
 
 **It is important to note that you'll need to use yabai in `bsp` or `stack` layout mode in order to prevent app windows to overlap simple-bar.**
 
