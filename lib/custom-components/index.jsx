@@ -1,4 +1,3 @@
-import * as Uebersicht from 'uebersicht'
 import * as Settings from '../services/settings'
 import Weather from './weather.jsx'
 

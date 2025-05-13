@@ -5,6 +5,8 @@ import * as ClassNames from '../services/classnames'
 import Widget from './widget.jsx'
 import useWidgetRefresh from '../hooks/use-widget-refresh'
 
+const { React } = Uebersicht
+
 const settings = Settings.get()
 const { network } = settings.dataWidgets
 const { color, device, onClickCommand, refreshOnClick, refreshFrequency } = network
@@ -17,7 +19,7 @@ const renderName = (name) => {
 }
 
 const Network = () => {
-  const [output, setOutput] = Uebersicht.React.useState()
+  const [output, setOutput] = React.useState()
 
   const getNetwork = async () => {
     const [status, ssid] = await Promise.all([

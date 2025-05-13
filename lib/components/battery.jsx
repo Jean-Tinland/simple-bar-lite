@@ -6,6 +6,8 @@ import * as Icons from './icons.jsx'
 import Widget from './widget.jsx'
 import useWidgetRefresh from '../hooks/use-widget-refresh'
 
+const { React } = Uebersicht
+
 const settings = Settings.get()
 const { battery } = settings.dataWidgets
 const { color, onClickCommand, refreshOnClick, refreshFrequency } = battery
@@ -18,7 +20,7 @@ const getTransform = (value) => {
 }
 
 const Battery = () => {
-  const [output, setOutput] = Uebersicht.React.useState()
+  const [output, setOutput] = React.useState()
 
   const getBattery = async () => {
     const [percentage, status, caffeinate] = await Promise.all([

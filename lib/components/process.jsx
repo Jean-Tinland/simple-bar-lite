@@ -1,6 +1,8 @@
 import * as Uebersicht from 'uebersicht'
 import * as Slider from '../services/slider'
 
+const { React } = Uebersicht
+
 const getName = (app, title) => {
   if (!title.length || app === title) return app
   if (title.includes(app)) return title
@@ -8,7 +10,7 @@ const getName = (app, title) => {
 }
 
 const Process = ({ currentWindow }) => {
-  const ref = Uebersicht.React.useRef()
+  const ref = React.useRef()
 
   if (!currentWindow) return null
 

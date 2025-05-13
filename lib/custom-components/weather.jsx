@@ -2,6 +2,8 @@ import * as Uebersicht from 'uebersicht'
 import Widget from '../components/widget.jsx'
 import useWidgetRefresh from '../hooks/use-widget-refresh'
 
+const { React } = Uebersicht
+
 const toJson = (res) => res.json()
 
 const getWeatherLabel = ({ location, current, forecast1hour }) => {
@@ -9,7 +11,7 @@ const getWeatherLabel = ({ location, current, forecast1hour }) => {
 }
 
 const Weather = ({ location = 'Gorinchem, ZH', refreshFrequency, refreshOnClick, color, classes }) => {
-  const [output, setOutput] = Uebersicht.React.useState()
+  const [output, setOutput] = React.useState()
 
   const getWeather = async () => {
     const { current_condition, nearest_area, weather } = await fetch(`https://wttr.in/${location}?format=j1`).then(

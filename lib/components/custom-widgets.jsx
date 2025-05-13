@@ -4,11 +4,13 @@ import * as Output from '../services/output'
 import Widget from './widget.jsx'
 import useWidgetRefresh from '../hooks/use-widget-refresh'
 
+const { React } = Uebersicht
+
 const settings = Settings.get()
 const { customWidgets } = settings
 
 const CustomWidget = ({ widget }) => {
-  const [output, setOutput] = Uebersicht.React.useState()
+  const [output, setOutput] = React.useState()
   const {
     color = 'currentColor',
     command = 'echo "Hello Wold!"',

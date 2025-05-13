@@ -3,13 +3,15 @@ import * as Settings from '../services/settings'
 import Widget from './widget.jsx'
 import useWidgetRefresh from '../hooks/use-widget-refresh'
 
+const { React } = Uebersicht
+
 const settings = Settings.get()
 const { dateTime } = settings.dataWidgets
 const { color, formatOptions, locale, overrideFormatOptions, onClickCommand, refreshOnClick, refreshFrequency } =
   dateTime
 
 const DateTime = () => {
-  const [output, setOutput] = Uebersicht.React.useState()
+  const [output, setOutput] = React.useState()
 
   const getDateTime = () => {
     const date = new Date()
