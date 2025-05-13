@@ -1,4 +1,4 @@
-# simple-bar-lite
+# <img src="./images/logo-simple-bar-lite.png" width="200" alt="simple-bar-lite" />
 
 A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersicht](https://github.com/felixhageloh/uebersicht). This is a simplified version of [simple-bar](https://github.com/Jean-Tinland/simple-bar).
 
@@ -24,9 +24,9 @@ Becareful, for Big Sur users, some actions must be taken in order to make yabai 
 
 ## Preview
 
-![img](./preview-dark.jpg)
+![img](./images/preview-dark.jpg)
 
-![img](./preview-light.jpg)
+![img](./images/preview-light.jpg)
 
 ## Installation
 
@@ -81,7 +81,7 @@ To add a new component
 
 1. add a file + contents to `./lib/custom-components/`
 2. add the component to `./lib/custom-components/index.jsx`
-3. add configuration item to `./custom-settings.json` with an object containing at least 
+3. add configuration item to `./custom-settings.json` with an object containing at least
    ```json
    { "name": "componentname", "enabled": true }
    ```
